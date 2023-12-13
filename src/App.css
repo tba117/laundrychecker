@@ -1,0 +1,785 @@
+* {
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.App{
+  background-color: #f2f6fc;
+}
+
+
+
+header{
+  width: 100%;
+  height: 35px;
+  background-color: #212832;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  box-shadow: 0 15px 25px 0 rgba(0, 0, 0, .1);
+}
+
+header h1{
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  margin: 0;
+  font-size: 22px;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.bigimage{
+  width: auto;
+  background-color: #0061f2 !important;
+  color: white;
+  padding: 15rem 2.5rem 25rem;
+  border-radius: 0px 0px 160px 160px / 0px 0px 50px 50px;
+}
+
+.bigimage h2{
+  font-size: 28px;
+}
+
+
+
+.accordions{
+  margin-top: 130px;
+}
+
+
+
+.content{
+  padding: 0 15px;
+}
+
+
+
+.selected-area{
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+  position: sticky;  /* ついてくるやつ */
+  bottom: 5px;
+}
+
+.selected-area p{
+  font-size: 15px;
+  color: #444;  
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.selected-area img{
+  background-color: white;
+  border: 3px solid #333;
+  border-radius: 5px;
+  width: 40px;
+  height: 32.5px;
+  margin: 3px;
+  padding: 10px;
+}
+
+.clearbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #0061f2;
+  border: 2px solid #0061f2;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+
+.resultbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 250px;
+  border: 2px solid #0061f2;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #0061f2;
+  font-size: 1em;
+  margin-top: 60px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.resultbutton:hover {
+  border: none;
+  background-color: #0061f2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.result-area{
+  color: #444;
+  background-color: #fff;
+  max-width: 500px;
+  margin:  90px auto 0;
+  padding-bottom: 10px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.result-area h3{
+  font-size: 15px;
+  color: #333;  
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.result-area p{
+  margin: 10px 13px;
+  line-height: 28px;
+}
+
+
+
+footer{
+  margin-top: 150px;
+  padding-top: 50px;
+  color: #fffefe8b;
+  height: 450px;
+  line-height: 35px;
+  background-color: #212832;
+}
+
+footer h2{
+  padding-left: 40px;
+  font-size: 25px;
+}
+
+footer ul{
+  font-size: 17px;
+}
+
+footer li{
+  list-style: none;
+}
+
+footer a{
+  text-decoration: none;
+  color: #fffefe8b;
+}
+
+footer p{
+  padding-top: 140px;
+  text-align: center;
+}
+
+
+
+.about-content{
+  padding: 130px 25px 0; 
+}
+
+.about-content h2{
+  font-size: 35px;
+  margin: 0;
+}
+
+.about-content h6{
+  font-size: 16px;
+  margin: 0;
+}
+
+.about-content p{
+  font-weight: 100;
+  font-size: 18px;
+}
+
+
+
+.mail-content{
+  padding: 130px 20px 0;
+}
+
+.mail-content h2{
+  font-size: 30px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.mail-content ul{
+  border: 1px solid #cdcbcb;
+  border-radius: 6px;
+  padding: 15px 30px;
+  list-style: none;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.section{
+  margin: 0 auto;
+  height: 600px;
+  max-width: 648px;
+}
+
+.section dl{
+  color: #444;
+  height: 360px;
+}
+
+ .section dd{
+  width: 100%;
+  margin: 0;
+ }
+
+.section input,textarea{
+  border-radius: 4px;
+  transition: 0.3s;
+  border: 1px solid #cdcdcd;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+.section textarea{
+  height: 100px;
+}
+
+input:focus,textarea:focus {
+  border-color: #0061f2;
+}
+
+.section dt{
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.btnWrap button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0061f2;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+
+
+
+/*------家庭洗濯ボタン------*/
+.accordion001{
+  max-width: 500px;  /*最大幅を500pxに */
+  background-color: #f9ced5;
+  margin: 0 auto;     /*アコーディオンボタンを水平方向に中央配置*/
+  border-radius: 5px;  /*角を5pxの丸みに*/
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion001:not([open]){  /*開いていないとき*/
+  margin-bottom: 7px;
+}
+
+.accordion001 summary{  /*アコーディオンの親ボタン*/
+  display: flex;   /*フレックスボックスとして配置*/
+  justify-content: space-between;  /*要素間のスペースを均等に*/
+  align-items: center;   /*要素を水平方向に中央配置*/
+  position: relative;  /*相対位置設定*/
+  padding: 1em 2em;  /*emは16px*1em = 16em*/
+  border-radius: 5px;  /*角を5pxの丸みに*/
+  background-color: #FF6699;
+  color: #ffffff;
+  font-weight: 600;  /*フォントの太さ*/
+  cursor: pointer;  /*マウスカーソルをポインターに*/
+}
+
+.accordion001 summary::-webkit-details-marker{  /*Safariで表示されるデフォルトの三角形アイコンを消します*/
+  display: none;
+}
+
+.accordion001 summary::after{  /*三角ボタンの設定*/
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion001[open] summary::after{  /*アコーディオンが開いた時のスタイル*/
+  transform: rotate(225deg);
+}
+
+.accordion001 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 0.5px;
+  transition: transform .5s;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion001[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button001{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion001 img{
+  width: 63px;
+  height: 55.5px;
+}
+
+.accordion001 button:hover{
+  background-color: #f9ced5;
+}
+
+.accordion001 button :active{
+  transform: scale(.95);
+}
+
+
+
+/*------漂白ボタン------*/
+.accordion002{
+  max-width: 500px;
+  background-color: #f4d392;
+  margin:  auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion002:not([open]){
+  margin-bottom: 7px;
+}
+
+.accordion002 summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #FFA500;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion002 summary::-webkit-details-marker{
+  display: none;
+}
+
+.accordion002 summary::after{
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion002[open] summary::after{
+  transform: rotate(225deg);
+}
+
+.accordion002 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 0.5px;
+  transition: transform .5s, opacity .5s;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion002[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button002{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion002 img{
+  width: 63px;
+  height: 55.5px;
+}
+
+.accordion002 button:hover{
+  background-color: #f4d392;
+}
+
+.accordion002 button :active{
+  transform: scale(.95);
+}
+
+
+
+
+/*------乾燥方法ボタン------*/
+.accordion003{
+  max-width: 500px;
+  background-color: #f6e79e;
+  margin:  auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion003:not([open]){
+  margin-bottom: 7px;
+}
+
+.accordion003 summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #FFD700;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion003 summary::-webkit-details-marker{
+  display: none;
+}
+
+.accordion003 summary::after{
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion003[open] summary::after{
+  transform: rotate(225deg);
+}
+
+.accordion003 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 0.5px;
+  transition: transform .5s, opacity .5s;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion003[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button003{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion003 img{
+  width: 65px;
+  height: 61px;
+}
+
+.accordion003 button:hover{
+  background-color: #f6e79e;
+}
+
+.accordion003 button :active{
+  transform: scale(.95);
+}
+
+
+
+/*------干し方ボタン------*/
+.accordion004{
+  max-width: 500px;
+  background-color: #e2fa9a;
+  margin:  auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion004:not([open]){
+  margin-bottom: 7px;
+}
+
+.accordion004 summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #32CD32	;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion004 summary::-webkit-details-marker{
+  display: none;
+}
+
+.accordion004 summary::after{
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion004[open] summary::after{
+  transform: rotate(225deg);
+}
+
+.accordion004 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 6px;
+  transition: transform .5s, opacity .5s;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion004[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button004{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion004 img{
+  width: 63px;
+  height: 61px;
+}
+
+.accordion004 button:hover{
+  background-color: #e2fa9a;
+}
+
+.accordion004 button :active{
+  transform: scale(.95);
+}
+
+
+
+/*------アイロンボタン------*/
+.accordion005{
+  max-width: 500px;
+  background-color: #a8f4cedc;
+  margin:  auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion005:not([open]){
+  margin-bottom: 7px;
+}
+
+.accordion005 summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #66CDAA;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion005 summary::-webkit-details-marker{
+  display: none;
+}
+
+.accordion005 summary::after{
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion005[open] summary::after{
+  transform: rotate(225deg);
+}
+
+.accordion005 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 0.5px;
+  transition: transform .5s, opacity .5s;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion005[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button005{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion005 img{
+  width: 63px;
+  height: 55.5px;
+}
+
+.accordion005 button:hover{
+  background-color: #a8f4cedc;
+}
+
+.accordion005 button :active{
+  transform: scale(.95);
+}
+
+
+
+/*------クリーニングボタン------*/
+.accordion006{
+  max-width: 500px;
+  background-color: #b9daeb;
+  margin:  auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.accordion006:not([open]){
+  margin-bottom: 7px;
+}
+
+.accordion006 summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  border-radius: 5px;
+  background-color: #00BFFF;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion006 summary::-webkit-details-marker{
+  display: none;
+}
+
+.accordion006 summary::after{
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion006[open] summary::after{
+  transform: rotate(225deg);
+}
+
+.accordion006 button{
+  transform: translateY(-10px);
+  margin: 5px;
+  padding: 0.5px;
+  transition: transform .5s, opacity .5s;
+  border-radius: 5px;
+  border: 1px solid  #cdcdcd;
+  cursor: pointer;
+}
+
+.accordion006[open] button{
+  transform: none;
+  opacity: 1;
+}
+
+.button006{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.accordion006 img{
+  width: 63px;
+  height: 61px;
+}
+
+.accordion006 button:hover{
+  background-color: #b9daeb;
+}
+
+.accordion006 button :active{
+  transform: scale(.95);
+}
