@@ -27,8 +27,9 @@ function App() {
       <div className="App">
       <Header />
 
-      <Routes> {/*中身だけコンポーネントにして切り替え*/}
       <ScrolltoTop/>
+
+      <Routes> {/*中身だけコンポーネントにして切り替え*/}
        <Route path='/' element={<Accordion />}/>
        <Route path='/about' element={<About />}/>
        <Route path='/privacy' element={<Privacy />}/>
