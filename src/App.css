@@ -159,6 +159,12 @@ footer{
 footer h2{
   padding-left: 40px;
   font-size: 25px;
+  margin: 0;
+}
+
+.domain{
+  padding-left: 40px;
+  margin: 0;
 }
 
 footer ul{
@@ -174,8 +180,8 @@ footer a{
   color: #fffefe8b;
 }
 
-footer p{
-  padding-top: 140px;
+.icon{
+  padding-top: 70px;
   text-align: center;
 }
 
