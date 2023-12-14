@@ -26,8 +26,8 @@ const Mail = () => {
     e.preventDefault();  //通常フォーム送信時にページのリロードが行われるが、それをキャンセルする
 
     try{
-      const response = await fetch('https://www.laundrychecker.com/send-email', {  //fetch:/send-emailからデータを取得
-        method: 'POST',
+      const response = await fetch('https://laundrychecker-back-8e9bacf9c706.herokuapp.com/send-email', {  //fetch:/send-emailからデータを取得
+        method: 'POST',                //バックエンド側のURL
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
