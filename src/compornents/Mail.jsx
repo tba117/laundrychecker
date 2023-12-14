@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const Mail = () => {
-
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({   //formDataの初期値の定義

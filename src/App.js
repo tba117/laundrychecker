@@ -6,8 +6,20 @@ import About from './compornents/About';
 import Privacy from './compornents/Privacy';
 import Disclaimer from './compornents/Disclaimer';
 import Mail from './compornents/Mail';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Success from './compornents/Success';
+import { useEffect } from 'react';
+
+//遷移後のページを最上部から表示させるための関数
+const ScrolltoTop = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+};
+
 
 function App() {
   return (
@@ -16,6 +28,7 @@ function App() {
       <Header />
 
       <Routes> {/*中身だけコンポーネントにして切り替え*/}
+      <ScrolltoTop/>
        <Route path='/' element={<Accordion />}/>
        <Route path='/about' element={<About />}/>
        <Route path='/privacy' element={<Privacy />}/>
