@@ -28,6 +28,7 @@ const Mail = () => {
     try{
       const response = await fetch('https://www.laundrychecker.com/send-email', {  //fetch:/send-emailからデータを取得
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },
